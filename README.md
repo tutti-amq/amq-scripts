@@ -14,3 +14,5 @@ I do not own full database of anime names used in AMQ (that mostly concerns shor
 - alt/short anime name that I did not encounter while playing and filling database
 - new anime that have not been included while generating latest shortcuts file
 - some changed/removed names affecting results of shortcuts generation
+
+##### P.S. I will be updating shortcuts file each 2 weeks (probably)
