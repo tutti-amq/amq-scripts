@@ -4,7 +4,7 @@ What it does:
 - show best shortcut(-s) for an anime after the song plays
 
 Which shortcuts are considered "best"
-- shortcut is considered best if it shows anime as 1st in dropdown (that means some shortcuts are ugly, but they make the work done)
+- shortcut is considered best if it shows anime as 1st in dropdown (that means some shortcuts are ugly, but they do the work)
 - while calculating shortcuts I only included the ones of shortest length (e.g if anime has at least one 3 symbol shortcut I wouldn't bother with 4 symbol ones)
 
 #### Disclaimer:
