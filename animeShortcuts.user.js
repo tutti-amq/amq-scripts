@@ -21,10 +21,30 @@ function onSongPlayed(data) {
   let currentShortcuts = !shortcuts.hasOwnProperty(data.songInfo.annId)
     ? "Anime isn't in shortcut database yet"
     : shortcuts[data.songInfo.annId] != null
-    ? shortcuts[data.songInfo.annId]
+    ? formatShortcuts(shortcuts[data.songInfo.annId])
     : "Anime doesn't have shortcuts";
 
   infoDiv.innerHTML = `<h5><b>Anime shortcuts: </b></h5>${currentShortcuts}<br><br>`;
+}
+
+function formatShortcuts(shortcuts) {
+  let uniqueShortcuts = shortcuts.filter(onlyUnique);
+  let formattedString = "";
+  let shortcutsLength = uniqueShortcuts.length;
+  uniqueShortcuts.forEach((shortcut, index) => {
+    let separator = index == shortcutsLength - 1 ? "" : ", ";
+    if (shortcut.includes("'")) {
+      formattedString += `"${shortcut}"${separator}`;
+    } else {
+      formattedString += `'${shortcut}'${separator}`;
+    }
+  });
+
+  return formattedString;
+}
+
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
 }
 
 function setup() {
