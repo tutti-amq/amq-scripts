@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         AMQ Anime Shortcuts
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.0.1
 // @description  Displays shortest shortcuts for anime (must be first in dropfown) after guessing phase
 // @author       Tutti
 // @match        https://animemusicquiz.com/*
 // @require      https://raw.githubusercontent.com/tutti-amq/amq-scripts/main/shortcuts.js
+// @downloadURL  https://raw.githubusercontent.com/tutti-amq/amq-scripts/main/animeShortcuts.user.js
 // @grant        none
 // ==/UserScript==
 
