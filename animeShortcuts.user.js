@@ -6,6 +6,7 @@
 // @author       Tutti
 // @match        https://animemusicquiz.com/*
 // @require      https://raw.githubusercontent.com/tutti-amq/amq-scripts/main/shortcuts.js
+// @downloadURL  https://github.com/tutti-amq/amq-scripts/raw/main/animeShortcuts.user.js
 // @updateURL    https://github.com/tutti-amq/amq-scripts/raw/main/animeShortcuts.user.js
 // @grant        none
 // ==/UserScript==
