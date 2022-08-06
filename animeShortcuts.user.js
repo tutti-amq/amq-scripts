@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AMQ Anime Shortcuts
 // @namespace    http://tampermonkey.net/
-// @version      1.0.3
+// @version      1.0.4
 // @description  Displays shortest shortcuts for anime (must be first in dropfown) after guessing phase
 // @author       Tutti
 // @match        https://animemusicquiz.com/*
@@ -34,12 +34,8 @@ function formatShortcuts(shortcuts) {
   let formattedString = "";
   let shortcutsLength = uniqueShortcuts.length;
   uniqueShortcuts.forEach((shortcut, index) => {
-    let separator = index == shortcutsLength - 1 ? "" : ", ";
-    if (shortcut.includes("'")) {
-      formattedString += `"${shortcut}"${separator}`;
-    } else {
-      formattedString += `'${shortcut}'${separator}`;
-    }
+    let formattedShortcut = shortcut.includes(" ") ? shortcut.replaceAll(" ", "&nbsp") : shortcut;
+    formattedString += `<code style = "color:white;background-color:#f1f1f1">${formattedShortcut}</code> `;
   });
 
   return formattedString;
