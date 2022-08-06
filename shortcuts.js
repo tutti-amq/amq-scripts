@@ -1,4 +1,4 @@
-let shortcuts = {
+{
     "1": ["nks"],
     "2": ["oca", "aly", "yps"],
     "3": ["alu"],
@@ -7570,4 +7570,4 @@ let shortcuts = {
     "25948": ["c -"],
     "25952": [" ama", "amab", "mabi", "ie-h", "e-hi", "ime."],
     "26035": ["i! 5"]
-};
+}
