@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AMQ Anime Shortcuts
 // @namespace    http://tampermonkey.net/
-// @version      1.0.4
+// @version      1.0.5
 // @description  Displays shortest shortcuts for anime (must be first in dropfown) after guessing phase
 // @author       Tutti
 // @match        https://animemusicquiz.com/*
@@ -35,7 +35,7 @@ function formatShortcuts(shortcuts) {
   let shortcutsLength = uniqueShortcuts.length;
   uniqueShortcuts.forEach((shortcut, index) => {
     let formattedShortcut = shortcut.includes(" ") ? shortcut.replaceAll(" ", "&nbsp") : shortcut;
-    formattedString += `<code style = "color:white;background-color:#f1f1f1">${formattedShortcut}</code> `;
+    formattedString += `<code style = "color:white;background-color:#2e2c2c;border-width:0.5px;border-style:solid;border-color:white">${formattedShortcut}</code> `;
   });
 
   return formattedString;
@@ -49,7 +49,8 @@ function setup() {
   var boxDiv = document.querySelector("div.qpSideContainer > div.row");
   infoDiv = document.createElement("div");
 
-  infoDiv.className = "rowPlayCount";
+  infoDiv.className = "rowAnimeShortcuts";
+  infoDiv.style.cssText += "line-height: 1.7";
 
   boxDiv = boxDiv.parentElement;
   boxDiv.insertBefore(infoDiv, boxDiv.children[4]);
