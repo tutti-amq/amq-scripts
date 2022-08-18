@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AMQ Anime Shortcuts
 // @namespace    http://tampermonkey.net/
-// @version      1.0.6
+// @version      1.0.7
 // @description  Displays shortest shortcuts for anime (must be first in dropfown) after guessing phase
 // @author       Tutti
 // @match        https://animemusicquiz.com/*
@@ -22,7 +22,7 @@ if (window.quiz) {
 function onSongPlayed(data) {
   let currentShortcuts = !shortcuts.hasOwnProperty(data.songInfo.annId)
     ? "Anime isn't in shortcut database yet"
-    : shortcuts[data.songInfo.annId] != null
+    : shortcuts[data.songInfo.annId].length != 0
     ? formatShortcuts(shortcuts[data.songInfo.annId])
     : "Anime doesn't have shortcuts";
 
